@@ -1,7 +1,6 @@
 package de.martinspielmann.gitcms.gitcms;
 
 import java.util.Collection;
-import java.util.List;
 import java.util.stream.Collectors;
 
 
@@ -15,7 +14,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.test.context.ContextConfiguration;
 
 import com.atlassian.crowd.exception.ApplicationPermissionException;
 import com.atlassian.crowd.exception.ExpiredCredentialException;
@@ -27,8 +25,6 @@ import com.atlassian.crowd.model.user.User;
 import com.atlassian.crowd.service.client.CrowdClient;
 
 @Configuration
-@ContextConfiguration(locations = { "classpath:/applicationContext-CrowdClient.xml" })
-
 public class CrowdAuthenticationProvider implements AuthenticationProvider {
 
 	private static final Logger LOG = LoggerFactory.getLogger(CrowdAuthenticationProvider.class);
@@ -56,4 +52,5 @@ public class CrowdAuthenticationProvider implements AuthenticationProvider {
 	public boolean supports(Class<?> authentication) {
 		return (authentication.equals(UsernamePasswordAuthenticationToken.class));
 	}
+
 }

@@ -4,9 +4,9 @@
     <head>
         <title>Login</title>
     </head>
-    <body>
+    <body style="text-align: center;">
         <div th:if="${param.error}">
-            Invalid username and password.
+            Login failed.
         </div>
         <div th:if="${param.logout}">
             You have been logged out.
