@@ -9,4 +9,6 @@ public class GitcmsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(GitcmsApplication.class, args);
 	}
+	
+	
 }

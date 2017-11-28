@@ -1,0 +1,5 @@
+source:
+  git:
+    url: https://github.com/pingunaut/pseudorandombullshitgenerator.git
+    cron: "0 * * * * *"
+#   checkoutDir: /foo/bar
